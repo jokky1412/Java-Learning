@@ -1,9 +1,8 @@
 package com.javaproject.jcode.string;
 
 /**
- * <p>字符串学习：
+ * <p>字符串：
  * "abcd"和new String("abcd")的使用区别
- * <p>结论：
  * <p>如果只需要创建一个字符串，可以使用双引号的方式
  * <p>如果需要在堆中创建一个新的对象，可以选择构造函数的方式
  */
