@@ -4,8 +4,20 @@ import java.util.*;
 
 
 /**
- * <p>LinkedList：表现出双端队列queue、栈stack的用法                 
+ * <p>LinkedList：非同步，增删快，查询慢，线程不安全，效率高；     
+ * <p>不要通过随机访问去遍历LinkedList，效率低: get/set/add/remove，
+ * <p>而应该采用逐个遍历的方式：
  * 
+ * <p>1.迭代器：
+ * <pre>{@code} for(Iterator iter=list.iterator();iter.hasNext();) {
+ * <pre>iter.next();}
+ * 
+ * <p>2.for循环变种：
+ * <pre>{@code} for (Integer integ:list) {;}
+ * 
+ * <p>继承于AbstractSequentialList的双向链表。它也可以被当作堆栈stack、队列queue或双端队列进行操作
+ * <p>调用get(int location)时，首先会比较“location”和“双向链表长度的1/2”；
+ *    若前者大，则从链表头开始往后查找，直到location位置；否则，从链表末尾开始先前查找，直到location位置
  */
 public class LinkedList_skywang {
 
