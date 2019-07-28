@@ -47,6 +47,14 @@ public class LinkedList_skywang {
 	        llist.add("2");
 	        llist.add("3");
 	 
+	        /**
+	         * 通过add(int index, E element)向LinkedList插入元素时，
+	         * 先在双向链表中找到要插入节点的位置index；找到之后，再插入一个新节点。
+	         * 
+	         * 双向链表查找index位置的节点时，有一个加速动作：
+	         * 若index < 双向链表长度的1/2，则从前向后查找; 否则，从后向前查找
+	        */       
+	        
 	        // 将“4”添加到第一个位置
 	        llist.add(1, "4");
 	         
@@ -100,7 +108,16 @@ public class LinkedList_skywang {
 	        llist.set(2, "300");
 	        // 获取第3个元素。不建议在LinkedList中使用此操作，因为效率低！
 	        System.out.println("\nget(3):"+llist.get(2));
-	 
+	        
+	        /**
+	         * 通过get(int index)获取LinkedList第index个元素时，
+	         * 先是在双向链表中找到要index位置的元素，找到之后再返回。
+	         * 
+	         * 双向链表查找index位置的节点时，有一个加速动作，
+	         * 若index < 双向链表长度的1/2，则从前向后查找; 否则，从后向前查找。
+	         * 
+	        */
+	        
 	 
 	        // ---- toArray(T[] a) ----
 	        // 将LinkedList转行为数组

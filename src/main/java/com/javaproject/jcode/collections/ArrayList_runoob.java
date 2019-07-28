@@ -82,6 +82,10 @@ public class ArrayList_runoob {
 	    
 	    
 	    //获取指定位置的元素
+	    /**
+	     * 通过get(int index)获取ArrayList第index个元素时，
+	     * 直接返回数组中index位置的元素，不需要像LinkedList一样进行查找
+	     */
 	    for(int i = 0; i < list.size(); i++ ) {
 	    	System.out.println("list.get(" + i + "): " + list.get(i));
 	    }
