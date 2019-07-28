@@ -4,16 +4,16 @@ import java.util.*;
 
 
 /**
- * <p>LinkedList：非同步，增删快，查询慢，线程不安全，效率高；     
+ * <p>LinkedList：双向链表。非同步，增删快，查询慢，线程不安全，效率高；     
  * <p>不要通过随机访问去遍历LinkedList，效率低: get/set/add/remove，
  * <p>而应该采用逐个遍历的方式：
  * 
  * <p>1.迭代器：
  * <pre>{@code} for(Iterator iter=list.iterator();iter.hasNext();) {
- * <pre>iter.next();}
+ * {@code} iter.next();}</pre>
  * 
  * <p>2.for循环变种：
- * <pre>{@code} for (Integer integ:list) {;}
+ * <pre>{@code} for (Integer integ:list) {;}</pre>
  * 
  * <p>继承于AbstractSequentialList的双向链表。它也可以被当作堆栈stack、队列queue或双端队列进行操作
  * <p>调用get(int location)时，首先会比较“location”和“双向链表长度的1/2”；

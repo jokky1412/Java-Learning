@@ -6,7 +6,8 @@ import java.util.Vector;
 
 
 /**
- * <p>Vector：矢量队列，线程安全，默认容量10              
+ * <p>Vector：矢量队列，线程安全，默认容量10
+ * <p>若容量增加系数 >0，则将容量的值增加“容量增加系数”；否则，将容量大小增加一倍       
  * <p>队列，支持添加、删除、修改、遍历等功能       
  *         
  * <p>推荐用随机访问去遍历，而不用迭代器：                  
@@ -64,9 +65,24 @@ public class Vector_skywang {
             
         // 获取vec对应的String数组
         String[] arr = (String[]) vec.toArray(new String[0]);
+        // for循环
+        for(int i = 0; i < arr.length; i++) {
+        	System.out.println("arr[" + i + "]: " +  arr[i]);
+        }       
+        // 另一种for循环
         for (String str:arr)
             System.out.println("str:"+str);
+             
+        // 最快遍历方式：随机访问，通过索引值去遍历
+        String value = null;
+        for (int i = 0; i < vec.size(); i++) {
+            value = vec.get(i);        
+            System.out.println("value[" + i + "]: " + value);
+        }
 
+        
+        
+        
         // 清空Vector。clear()和removeAllElements()一样！
         vec.clear();
 //        vec.removeAllElements();

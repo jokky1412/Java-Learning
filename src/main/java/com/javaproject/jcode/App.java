@@ -1,17 +1,27 @@
 package com.javaproject.jcode;
 
-import junit.runner.Version;
+import com.javaproject.jcode.collections.ArrayList_runoob;
+import com.javaproject.jcode.collections.FailFastMechanism;
+import com.javaproject.jcode.collections.LinkedList_skywang;
+import com.javaproject.jcode.collections.Vector_skywang;
+
 
 /**
- * Hello world!
+ * 整体测试
  *
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main(String[] args )
     {
-        System.out.println( "Hello World!" );
-        System.out.println("JUnit version is: " + Version.id());
+    	ArrayList_runoob.main(args);
+    	FailFastMechanism.main(args);
+    	LinkedList_skywang.main(args);
+    	Vector_skywang.main(args);;
+    	
+    	
+    	
+    	
 
     }
 }

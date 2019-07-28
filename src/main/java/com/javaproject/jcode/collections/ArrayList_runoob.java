@@ -3,7 +3,7 @@ package com.javaproject.jcode.collections;
 import java.util.*;
 
 /**
- * <p>ArrayList
+ * <p>ArrayList：是一个数组队列，相当于动态数组，容量能动态增长
  * <p>基于数组实现的List类，它封装了一个动态的增长的、允许再分配的Object[]数组
  */
 public class ArrayList_runoob {
