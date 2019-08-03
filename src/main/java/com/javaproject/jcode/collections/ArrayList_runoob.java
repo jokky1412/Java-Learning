@@ -1,6 +1,8 @@
 package com.javaproject.jcode.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * <p>ArrayList：是一个数组队列，相当于动态数组，容量能动态增长

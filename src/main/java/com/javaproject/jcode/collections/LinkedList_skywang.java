@@ -1,7 +1,6 @@
 package com.javaproject.jcode.collections;
 
-import java.util.*;
-
+import java.util.LinkedList;
 
 /**
  * <p>LinkedList：双向链表。非同步，增删快，查询慢，线程不安全，效率高；     
