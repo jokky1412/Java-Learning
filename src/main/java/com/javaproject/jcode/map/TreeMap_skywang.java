@@ -5,10 +5,15 @@ import java.util.*;
 
 import javax.persistence.Entity;
 
-/**
- * 
- * 
- * 
+/** TreeMap：有序的，key-value集合
+ *<p> 支持序列化，支持一系列的导航方法，能被克隆
+ *<p> 基于红黑树（Red-Black tree）实现，映射根据其键的自然顺序进行排序，或者根据创建映射时提供的 Comparator 进行排序
+ *<p> 非同步，iterator方法返回的迭代器是fail-fast的
+ *
+ *<p> 通过entry set遍历TreeMap，效率高
+ *
+ *<p> 待学习：TreeMap的子map函数、导航函数
+ *
  */
 public class TreeMap_skywang {
 	
@@ -17,10 +22,33 @@ public class TreeMap_skywang {
     	TreeMap_APIs();
 
         // 测试TreeMap的导航函数
-        //testNavigableMapAPIs();
+        testNavigableMapAPIs();
 
         // 测试TreeMap的子Map函数
-        //testSubMapAPIs();
+        testSubMapAPIs();
+        
+        
+        // 测试遍历TreeMap
+        int val = 0;
+        String key = null;
+        Integer value = null;
+        Random r = new Random();
+        TreeMap map = new TreeMap();
+        System.out.println("\n测试遍历TreeMap：\n");
+        for (int i = 0; i < 12; i++) {
+            // 随机获取一个[0,100)之间的数字
+            val = r.nextInt(100);
+            
+            key = String.valueOf(val);
+            value = r.nextInt(5);
+            // 添加到TreeMap中
+            map.put(key, value);
+            
+            System.out.println(" key:" + key + " value:" + value);
+        }
+        // 通过entrySet()遍历TreeMap的key-value
+        iteratorTreeMapByEntryset(map);
+        
     }
 
     /**
@@ -46,8 +74,8 @@ public class TreeMap_skywang {
         while(iter.hasNext()) {
         	Map.Entry entry = (Map.Entry)iter.next();
             System.out.printf("next : %s - %s\n", entry.getKey(), entry.getValue());
-        }
-
+        }        
+        
         // TreeMap的键值对个数        
         System.out.printf("size: %s\n", tmap.size());
 
@@ -153,4 +181,50 @@ public class TreeMap_skywang {
         // 获取“大于bbb”的最小键值对
         System.out.printf("Key higher after ccc: %s%n\n",nav.higherKey("ccc"));
     }
+
+
+
+    /*
+     * 通过entry set遍历TreeMap
+     * 效率高!
+     */
+    private static void iteratorTreeMapByEntryset(TreeMap map) {
+        if (map == null) {
+        	return ;
+        	}
+
+        System.out.println("\niterator TreeMap By entryset");
+        String key = null;
+        Integer integ = null;
+        Iterator iter = map.entrySet().iterator();
+        while(iter.hasNext()) {
+            Map.Entry entry = (Map.Entry)iter.next();
+            
+            key = (String)entry.getKey();
+            integ = (Integer)entry.getValue();
+            System.out.println(key+" -- "+integ.intValue());
+        }
+    }
+
+
+    /*
+     * 遍历TreeMap的values
+     */
+    private static void iteratorTreeMapJustValues(TreeMap map) {
+        if (map == null) {
+        	return ;
+        	}
+            
+        Collection c = map.values();
+        Iterator iter= c.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next());
+       }
+    }
+
+
+
+
+
+
 }
