@@ -64,6 +64,26 @@ public class HashMap_skywang {
         }
 
         
+        // 遍历key
+        System.out.println("遍历key: \n");
+		// 假设map是TreeMap对象
+		// map中的key是String类型，value是Integer类型
+		String key = null;
+		Integer integ = null;
+		Iterator keyIter = map.keySet().iterator();
+		while (iter.hasNext()) {
+		         // 获取key
+		    key = (String)keyIter.next();
+		         // 根据key，获取value
+		    integ = (Integer)map.get(key);
+		    System.out.println(integ + "; ");
+		}
+        
+        
+        
+        
+        
+        
         // 通过HashMap.get(key)获取value
         System.out.println("map.get key one: " + map.get("one"));
           
