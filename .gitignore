@@ -1,4 +1,7 @@
-/target/
+/target/*
+/.idea/*
+/src/test/*
+*.iml
 
 
 *.classpath
