@@ -8,7 +8,7 @@ import com.javaproject.jcode.collections.Vector_skywang;
 
 /**
  * 整体测试
- *
+ * 测试IDEA
  */
 public class App 
 {
